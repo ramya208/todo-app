@@ -6,6 +6,12 @@ import {
     signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 // import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyD7qTTHKmFY5efDW8_CnSNaIB3HTX-oN9I",
     authDomain: "totolist-75185.firebaseapp.com",
@@ -78,7 +84,20 @@ if (loginBtn) {
     });
 
 }
+const logoutBtn = document.getElementById("logoutBtn");
 
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+        signOut(auth)
+            .then(() => {
+                alert("Logout Successful");
+                window.location.href = "login.html";
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+    });
+}
 
 
 
