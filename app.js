@@ -3,15 +3,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/fireba
 import {
     getAuth,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
-// import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+// import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyD7qTTHKmFY5efDW8_CnSNaIB3HTX-oN9I",
     authDomain: "totolist-75185.firebaseapp.com",
