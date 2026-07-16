@@ -71,11 +71,18 @@ if (loginBtn) {
                 window.location.href = "todo.html";
 
             })
+            // .catch((error) => {
+
+            //     alert(error.message);
+
+            // });
             .catch((error) => {
+    console.log(error);
+    console.log(error.code);
+    console.log(error.message);
 
-                alert(error.message);
-
-            });
+    alert(error.code + "\n" + error.message);
+});
 
     });
 
